@@ -1,2 +1,2 @@
 #!/bin/bash
-ls -a1p | { echo -n "./, ../, "; LC_COLLATE=C ls -a1p | sort -d --ignore-case --key=1.2,1.2 --key=1.1,1.1 | awk '{if($0 ~ /\//) printf "%s, ", $0; else printf "%s ", $0}' | sed 's/, $/\n/'; }
+ls -amvp
